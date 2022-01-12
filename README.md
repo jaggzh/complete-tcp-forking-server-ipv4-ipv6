@@ -11,3 +11,37 @@ Many examples exist online but they're incomplete or over-simplified.  This is i
 
 1. Added Callback-based server in `forking-server-with-callbacks/`
 1. Forking server has improvements to signal handling
+
+## Example of callback server running:
+
+Server:
+```
+$ ./server_cbs 
+Server started on port 1234
+Client connected
+_svr_client_handler()
+Client connected on 127.0.0.1
+---> CB: Client connected: IP=127.0.0.1
+Received from 127.0.0.1: 7 bytes: {Hello
+}
+---> CB: Our read callback called
+Received from 127.0.0.1: 7 bytes: {World
+}
+---> CB: Our read callback called
+---> CB: Our client disconnected with read() = 0
+Client disconnected (EOF on socket)
+```
+
+Telnet localhost 1234:
+```
+$ telnet localhost 1234
+Trying ::1...
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+Hello
+World
+^]
+telnet> quit
+Connection closed.
+```
