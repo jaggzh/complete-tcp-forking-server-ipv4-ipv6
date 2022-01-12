@@ -6,3 +6,8 @@ Many examples exist online but they're incomplete or over-simplified.  This is i
 1. Forking to allow multiple clients
 1. Proper (I hope) re-use of port to prevent "Address already in use" errors when binding
 1. SIGINT/HUP/TERM handling to close the socket (is that needed with SO_REUSEADDR?)
+
+## Update 2021-01-11
+
+1. Added Callback-based server in `forking-server-with-callbacks/`
+1. Forking server has improvements to signal handling

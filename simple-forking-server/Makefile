@@ -9,6 +9,7 @@ server: server.c
 vi:
 	vim \
 		Makefile \
+		README.md \
 		server.c \
 		server.h \
 		settings-example.h \
